@@ -1,5 +1,14 @@
 {
   "name": "FestaGdM20",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "c2f28d27",
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/dropboxapi",
+      "proxyUrl": "https://api.dropboxapi.com"
+    }
+  ],
+  "integrations": {
+    "cordova": {}
+  }
 }

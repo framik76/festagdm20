@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle color="dark">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Selfie</ion-title>
+    <ion-buttons end>
+      <button (click)="presentPopover($event)" ion-button color="dark">
+        <ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <!--<img *ngIf="base64Image" [src]="base64Image" />
+    <img *ngIf="!base64Image" src="assets/img/default-placeholder.png" />-->
+    <canvas id="imgCanvas"></canvas>
+  </ion-card>
+  <button ion-button icon-left full color="light" (click)="takePicture()">
+    <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+    Scatta foto
+  </button>
+  <button ion-button icon-left full color="light" (click)="selectFromGallery()">
+    <ion-icon ios="ios-images" md="md-images"></ion-icon>
+    Carica foto
+  </button>
+</ion-content>

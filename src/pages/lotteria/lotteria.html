@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle color="dark">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lotteria</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider color="light">Estrazione 10/09/2017</ion-item-divider>
+    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-thumbnail item-start>
+        <img src="assets/img/lotteria/{{item.id}}.png" />
+      </ion-thumbnail>
+      {{item.description}}
+      <p>
+        {{item.offeredBy}}
+      </p>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>

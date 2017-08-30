@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle color="dark">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider color="light">Primi piatti</ion-item-divider>
+    <ion-item *ngFor="let item of primi" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Secondi piatti caldi</ion-item-divider>
+    <ion-item *ngFor="let item of secondiCaldi" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Secondi piatti freddi</ion-item-divider>
+    <ion-item *ngFor="let item of secondiFreddi" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Contorni</ion-item-divider>
+    <ion-item *ngFor="let item of contorni" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Formaggi</ion-item-divider>
+    <ion-item *ngFor="let item of formaggi" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Dolci</ion-item-divider>
+    <ion-item *ngFor="let item of dolci" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Pizze</ion-item-divider>
+    <ion-item *ngFor="let item of pizze" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">Bevande</ion-item-divider>
+    <ion-item *ngFor="let item of bevande" (click)="itemTapped($event, item)">
+      {{item.title}}
+      <div class="item-note" item-right>
+        € {{item.price}}
+      </div>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>

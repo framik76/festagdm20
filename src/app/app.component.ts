@@ -5,6 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { MenuPage } from '../pages/menu/menu';
+import { LotteriaPage } from '../pages/lotteria/lotteria';
+import { SelfiePage } from '../pages/selfie/selfie';
+import { GalleryPage } from '../pages/gallery/gallery';
+import { InfoPage } from '../pages/info/info';
+import { DoveSiamoPage } from '../pages/dovesiamo/dovesiamo';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,15 +20,21 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{icon: string, title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { icon: 'home', title: 'Home', component: HomePage },
+      { icon: 'calendar', title: 'Programma', component: ListPage },
+      { icon: 'restaurant', title: 'Menu', component: MenuPage },
+      { icon: 'trophy', title: 'Lotteria', component: LotteriaPage },
+      { icon: 'camera', title: 'Selfie', component: SelfiePage },
+      { icon: 'images', title: 'Galleria', component: GalleryPage },
+      { icon: 'information-circle', title: 'Info', component: InfoPage },
+      { icon: 'pin', title: 'Dove siamo', component: DoveSiamoPage }
     ];
 
   }
